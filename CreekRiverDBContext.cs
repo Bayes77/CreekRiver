@@ -8,7 +8,7 @@ public class CreekRiverDBContext : DbContext
     public DbSet<Campsite> Campsites {get; set;}
     public DbSet<CampsiteType> CampsiteTypes {get; set;}
 
-    public CreekRiverDBContext(DbContextOptions<CreekRiverDbContext> context) : base(context)
+    public CreekRiverDBContext(DbContextOptions<CreekRiverDBContext> context) : base(context)
     {
 
     }
