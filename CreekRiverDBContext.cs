@@ -1,5 +1,6 @@
-using Microsoft.EntityFrameworkCore;
 using CreekRiver.Models;
+using Microsoft.EntityFrameworkCore;
+//using CreekRiver.Models;
 
 public class CreekRiverDBContext : DbContext
 {
