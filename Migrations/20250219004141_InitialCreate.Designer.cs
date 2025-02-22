@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace CreekRiver.Migrations
 {
-    [DbContext(typeof(CreekRiverDBContext))]
+    [DbContext(typeof(CreekRiverDbContext))]
     [Migration("20250219004141_InitialCreate")]
     partial class InitialCreate
     {

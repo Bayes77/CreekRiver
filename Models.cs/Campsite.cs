@@ -1,10 +1,11 @@
-
+using System.ComponentModel.DataAnnotations;
 
 namespace CreekRiver.Models;
 
 public class Campsite
 {
     public int Id {get; set;}
+    [Required]
     public string NickName {get; set;}
     public string ImageUrl {get; set;}
     public int CampsiteTypeId {get; set;}

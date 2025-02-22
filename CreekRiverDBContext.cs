@@ -2,26 +2,30 @@ using CreekRiver.Models;
 using Microsoft.EntityFrameworkCore;
 //using CreekRiver.Models;
 
-public class CreekRiverDBContext : DbContext
+public class CreekRiverDbContext : DbContext //example of inheritance
 {
+
+    //Dbset transforms Linq queries int SQL queries
     public DbSet<Reservation> Reservations {get; set;}
     public DbSet<UserProfile> UserProfiles {get; set;}
     public DbSet<Campsite> Campsites {get; set;}
     public DbSet<CampsiteType> CampsiteTypes {get; set;}
 
-    public CreekRiverDBContext(DbContextOptions<CreekRiverDBContext> context) : base(context)
+    //were using the base keyword to pass that object down to DbContext when asp.net creates the CreekRiverDbContext class.
+    public CreekRiverDbContext(DbContextOptions<CreekRiverDbContext> context) : base(context)
     {
 
     }
-
+    //an example of encapsulation
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        //seed data with campsite types
         modelBuilder.Entity<CampsiteType>().HasData(new CampsiteType[]
         {
         new CampsiteType {Id = 1, CampsiteTypeName = "Tent", FeePerNight = 15.99m, MaxReservationDays = 7},
         new CampsiteType {Id = 2, CampsiteTypeName = "RV", FeePerNight = 26.50m, MaxReservationDays = 14},
-        new CampsiteType {Id = 3, CampsiteTypeName = "Primitive", FeePerNight = 10.00m, MaxReservationDays = 4},
-        new CampsiteType {Id = 5, CampsiteTypeName = "Hammock", FeePerNight = 12m, MaxReservationDays = 7},
+        new CampsiteType {Id = 3, CampsiteTypeName = "Primitive", FeePerNight = 10.00m, MaxReservationDays = 3},
+        new CampsiteType {Id = 4, CampsiteTypeName = "Hammock", FeePerNight = 12m, MaxReservationDays = 7},
 
       
     });
