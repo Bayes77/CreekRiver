@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace CreekRiver.Migrations
 {
-    [DbContext(typeof(CreekRiverDBContext))]
+    [DbContext(typeof(CreekRiverDbContext))]
     partial class CreekRiverDBContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
